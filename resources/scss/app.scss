@@ -11,3 +11,6 @@
     background: #fff url("../images/ajax-loader.gif") center center no-repeat !important;
 }
 
+.inverted * {
+  color: $inverted-color !important;
+}
