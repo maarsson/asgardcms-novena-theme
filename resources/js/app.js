@@ -1,4 +1,6 @@
-require('jquery');
+global.$ = require("jquery");
+global.jQuery = global.$;
+
 require('popper.js');
 require('bootstrap');
 require('jquery.counterup');
