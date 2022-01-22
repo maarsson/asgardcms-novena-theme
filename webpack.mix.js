@@ -38,6 +38,7 @@ mix
     .sass('resources/scss/app.scss', 'assets/css/app.css')
     .sourceMaps(!mix.inProduction())
     .copy('resources/images', 'assets/images')
+    .copy('resources/fonts', 'assets/fonts')
     // Live reload on watch
     .browserSync({
         proxy: process.env.APP_URL,
