@@ -21,21 +21,19 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-lg-2 text-right">
+                <div class="col-lg-1 text-right">
                 @if(count(LaravelLocalization::getSupportedLocales())>1)
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icofont-md icofont-globe-alt"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                    <a rel="alternate" lang="{{$localeCode}}" href="{{LaravelLocalization::getLocalizedURL($localeCode) }}">
-                                <button class="dropdown-item {{ App::getLocale() == $localeCode ? 'active' : '' }}" type="button">
-                                        {!! $properties['native'] !!}
-                                </button>
-                                    </a>
-                            @endforeach
-                        </div>
+                    <button type="button" class="btn btn-transparent btn-round-full language-select dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="icofont-md icofont-world"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                <a rel="alternate" lang="{{$localeCode}}" href="{{LaravelLocalization::getLocalizedURL($localeCode) }}">
+                            <button class="dropdown-item {{ App::getLocale() == $localeCode ? 'active' : '' }}" type="button">
+                                    {!! $properties['native'] !!}
+                            </button>
+                                </a>
+                        @endforeach
                     </div>
                 @endif
                 </div>
