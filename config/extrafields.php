@@ -1,5 +1,15 @@
 <?php
 
+    /*
+    |----------------------------------
+    | Extrafiled module configuration
+    |----------------------------------
+    | Theme: Novena
+    |----------------------------------
+    | This configuration is required in
+    | order to handle the theme correctly
+    */
+
 return [
     'name' => 'Extrafield',
     'block_template_fields' => [
