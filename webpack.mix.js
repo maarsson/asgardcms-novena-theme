@@ -29,10 +29,15 @@ mix
     .webpackConfig({
        devtool: !mix.inProduction() ? 'source-map' : false
     })
+    .options({
+        // do not convert and version images
+       processCssUrls: false
+    })
     .setPublicPath('assets')
     .js('resources/js/app.js', 'assets/js/app.js')
     .sass('resources/scss/app.scss', 'assets/css/app.css')
     .sourceMaps(!mix.inProduction())
+    .copy('resources/images', 'assets/images')
     // Live reload on watch
     .browserSync({
         proxy: process.env.APP_URL,
