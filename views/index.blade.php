@@ -14,7 +14,7 @@
     @include('sections.features')
     @include('sections.about')
     @include('sections.cta')
-    @include('sections.service')
+    @include('sections.services')
     @include('sections.appointment')
     @include('sections.testimonials')
     @include('sections.clients')
