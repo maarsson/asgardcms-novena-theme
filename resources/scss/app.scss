@@ -1,7 +1,13 @@
 @import 'bootstrap';
+@import 'node_modules/slick-carousel/slick/slick';
 @import 'node_modules/slick-carousel/slick/slick-theme';
 
 // Icofont
 @import 'plugins/icofont/icofont.min.css';
 
 @import 'theme';
+
+.slick-loading .slick-list {
+    background: #fff url("../images/ajax-loader.gif") center center no-repeat !important;
+}
+
