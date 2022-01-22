@@ -1,4 +1,11 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/js/app.js": "/js/app.js?id=9fa6653bd220963e3db6",
+    "/css/app.css": "/css/app.css?id=eeed860c35a4f5e9c9f3",
+    "/images/ajax-loader.gif": "/images/ajax-loader.gif?id=d41d8cd98f00b204e980",
+    "/images/logo.png": "/images/logo.png?id=4bc2a7ce39c01437d16b",
+    "/fonts/icofont.eot": "/fonts/icofont.eot?id=20e606bb2a29ad8b2288",
+    "/fonts/icofont.svg": "/fonts/icofont.svg?id=47d8c4d6ee7c696b0704",
+    "/fonts/icofont.ttf": "/fonts/icofont.ttf?id=21892e6e31e73b7ec0ac",
+    "/fonts/icofont.woff": "/fonts/icofont.woff?id=8ba10bd9648d5b035708",
+    "/fonts/icofont.woff2": "/fonts/icofont.woff2?id=b94becc14655066231f4"
 }
