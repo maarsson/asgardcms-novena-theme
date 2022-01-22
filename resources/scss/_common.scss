@@ -269,7 +269,7 @@ a:focus {
     font-size: 50px;
 }
 .gray-bg {
-    background: #f4f9fc;
+    background: $secondary-bg;
 }
 @include mobile {
     .text-lg {
