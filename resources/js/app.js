@@ -9,3 +9,7 @@ require('shufflejs');
 require('slick-carousel');
 
 require('./bootstrap');
+
+require('./map');
+require('./contact');
+require('./theme');
