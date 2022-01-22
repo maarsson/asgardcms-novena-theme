@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html lang="{{ LaravelLocalization::setLocale() }}">
 <head>
-    <meta charset="UTF-8">
-    @section('meta')
-        <meta name="description" content="@setting('core::site-description')"/>
-    @show
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@section('title')@setting('core::site-name')@show</title>
-    @if(isset($alternate))
-    @foreach($alternate as $alternateLocale=>$alternateSlug)
-        <link rel="alternate" hreflang="{{$alternateLocale}}" href="{{url($alternateLocale.'/'.$alternateSlug)}}">
-    @endforeach
-    @endif
-    <link rel="canonical" href="{{url()->current()}}" />
-    <link rel="shortcut icon" href="{{ Theme::url('favicon.ico') }}">
-
-    <link rel="stylesheet" href="{{ mix('css/app.css',  theme_assets_path()) }}" type="text/css">
-    @stack('css-stack')
+    @include('layouts.head')
+    @include('layouts.styles')
 </head>
 
-@auth
-    @include('partials.admin-bar')
-@endauth
-@include('partials.navigation')
+<body id="top">
+<header>
+    @auth
+        {{-- @include('header.admin-bar') --}}
+        {{-- @setting('core::site-name') --}}
+    @endauth
+    @include('layouts.header.top')
+    @include('layouts.header.navigation')
+</header>
 
-<div class="container">
-    @yield('content')
-</div>
-@include('partials.footer')
+@yield('content')
 
-<script src="{{ mix('js/app.js', theme_assets_path()) }}"></script>
-@yield('scripts')
+<footer class="footer section gray-bg">
+    @include('layouts.footer.footer')
+</footer>
 
-<?php if (Setting::has('core::analytics-script')): ?>
-{!! Setting::get('core::analytics-script') !!}
-<?php endif; ?>
-@stack('js-stack')
+@include('layouts.scripts')
 </body>
 </html>
