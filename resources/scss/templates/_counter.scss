@@ -2,6 +2,12 @@
     text-align: center;
     padding: 55px 0px 40px 0px;
     position: relative;
+    sup {
+        color: $light;
+        font-size: 25px;
+        top: 0;
+        left: 3px;
+    }
     i {
         display: block;
         color: rgba(255, 255, 255, .2);
