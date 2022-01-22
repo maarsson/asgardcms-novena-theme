@@ -144,6 +144,7 @@
         time: 1000
     });
     // Shuffle js filter and masonry
+    /*
     var Shuffle = window.Shuffle;
     var jQuery = window.jQuery;
     var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
@@ -156,4 +157,5 @@
             myShuffle.filter(input.value);
         }
     });
+    */
 })(jQuery);
