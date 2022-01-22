@@ -15,7 +15,7 @@
                     <div class="text-lg-right top-right-bar mt-2 mt-lg-0">
                         @if(@setting('configuration::phone-number'))
                         <a href="tel:@setting('configuration::phone-number-callable')" >
-                            <span>@lang("theme::header.call-now")</span>
+                            <span class="h4"><i class="icofont-ui-cell-phone mr-2"></i></span>
                             <span class="h4">@setting('configuration::phone-number')</span>
                         </a>
                         @endif
