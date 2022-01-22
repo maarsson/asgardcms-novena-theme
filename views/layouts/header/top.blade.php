@@ -11,28 +11,6 @@
                         @endif
                     </ul>
                 </div>
-                <div class="col-lg-2">
-                @if(count(LaravelLocalization::getSupportedLocales())>1)
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-flag"></i>
-                        <span>
-                            {{ LaravelLocalization::getCurrentLocaleName()  }}
-                            <i class="caret"></i>
-                        </span>
-                    </a>
-                    <ul class="dropdown-menu language-menu">
-                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                            <li class="{{ App::getLocale() == $localeCode ? 'active' : '' }}">
-                                <a rel="alternate" lang="{{$localeCode}}" href="{{LaravelLocalization::getLocalizedURL($localeCode) }}">
-                                    {!! $properties['native'] !!}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </li>
-                @endif
-                </div>
                 <div class="col-lg-4">
                     <div class="text-lg-right top-right-bar mt-2 mt-lg-0">
                         @if(@setting('configuration::phone-number'))
@@ -42,6 +20,24 @@
                         </a>
                         @endif
                     </div>
+                </div>
+                <div class="col-lg-2 text-right">
+                @if(count(LaravelLocalization::getSupportedLocales())>1)
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icofont-md icofont-globe-alt"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                    <a rel="alternate" lang="{{$localeCode}}" href="{{LaravelLocalization::getLocalizedURL($localeCode) }}">
+                                <button class="dropdown-item {{ App::getLocale() == $localeCode ? 'active' : '' }}" type="button">
+                                        {!! $properties['native'] !!}
+                                </button>
+                                    </a>
+                            @endforeach
+                        </div>
+                    </div>
+                @endif
                 </div>
             </div>
         </div>
